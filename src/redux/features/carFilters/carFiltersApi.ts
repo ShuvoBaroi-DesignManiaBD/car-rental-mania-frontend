@@ -1,7 +1,8 @@
 import { baseAPI } from "@/redux/api/baseApi";
 import { setCars } from "../car/carSlice";
 import { setCarsCount } from "./carFiltersSlice";
-import { TCar,  FormValues} from "@/types";
+import { TCar } from "@/types/car.type";
+import { FormValues } from "@/types/form.type";
 ;
 
 const carApi = baseAPI.injectEndpoints({

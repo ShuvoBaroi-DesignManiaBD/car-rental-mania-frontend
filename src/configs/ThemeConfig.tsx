@@ -6,9 +6,12 @@ const ThemeConfig = ({ children }: any) => {
       <ConfigProvider
         theme={{
           token: {
-            colorPrimary: "#482f21",
-            colorPrimaryBgHover: "#ba986a",
+            colorPrimary: "#F57105",
+            colorPrimaryBgHover: "#FF8901",
             colorPrimaryText: "#fff",
+            colorText: "#140A00",
+            colorTextSecondary: "#FFF5EB",
+            fontFamily: "Albert+Sans"
           },
           components: {
             Carousel: {

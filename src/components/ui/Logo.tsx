@@ -8,7 +8,7 @@ const Logo = ({ className }: className) => {
   return (
     <NavLink to="/">
       <img
-        src="https://ibb.co.com/Bqc2ZmM"
+        src="https://i.ibb.co.com/pJbjzgF/Rentalmania.webp"
         alt="logo"
         className={`${className}`}
       />

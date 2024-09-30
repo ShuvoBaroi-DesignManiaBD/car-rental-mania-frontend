@@ -4,7 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import subRoutes from "./sub.routes.tsx";
 import { routeGenerator } from "@/utils/routesGenerator.ts";
 import Dashboard from "@/pages/dashboards/Dashboard.tsx";
-import customerDashboardRoutes from "./customer/customer.routes.tsx";
+import customerDashboardRoutes from "./user/user.routes.tsx";
 import ProtectedRoute from "@/components/layouts/ProtectedRoute.tsx";
 // import OrderSuccess from "@/pages/order/order-success.tsx";
 import adminRoutes from "./admin/admin.routes.tsx";
