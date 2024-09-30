@@ -8,12 +8,12 @@ import customerDashboardRoutes from "./customer/customer.routes.tsx";
 import ProtectedRoute from "@/components/layouts/ProtectedRoute.tsx";
 // import OrderSuccess from "@/pages/order/order-success.tsx";
 import adminRoutes from "./admin/admin.routes.tsx";
-import { TPath } from "@/types/route.type.ts";
 import NotFound from "@/pages/NotFound.tsx";
 import TopLoadingProgressBar from "@/components/ui/progressBar/TopLoadingProgressBar.tsx";
 // import { lazy } from "react";
 import MainLayout from "@/components/layouts/MainLayout.tsx";
 import OrderSuccess from "@/pages/order/OrderSuccess.tsx";
+import { TPath } from "@/types/path.type.ts";
 // const MainLayout = lazy(() => import("@/components/layouts/MainLayout"));
 // const Dashboard = lazy(() => import("@/pages/dashboards/Dashboard"));
 const Routes = createBrowserRouter([
