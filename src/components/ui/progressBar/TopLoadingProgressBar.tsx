@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "nprogress/nprogress.css";
-import { Progress } from "antd";
+import { Progress, theme } from "antd";
 
 const TopLoadingProgressBar = () => {
   const location = useLocation(); // Track location changes
   const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState(0);
-
+  const {token} = theme.useToken();
   useEffect(() => {
     // Start loading on location change
     setIsLoading(true);
@@ -38,7 +38,7 @@ const TopLoadingProgressBar = () => {
         <Progress
           type="line"
           percent={progress}
-          strokeColor="#ba986a" // Customize the color of the progress bar
+          strokeColor={token.colorPrimary} // Customize the color of the progress bar
           showInfo={false} // Hide the percentage text
           style={{ position: "fixed", top: -12, left: 0, width: "100%", zIndex: 9999 }}
         />

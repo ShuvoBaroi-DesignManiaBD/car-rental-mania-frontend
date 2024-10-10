@@ -9,19 +9,21 @@ import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "react-hot-toast";
 import ThemeConfig from "./configs/ThemeConfig.tsx";
 import PageRefreshWarning from "./components/ui/modals/PageRefreshWarning.tsx";
+import { ReduxProvider } from "./lib/providers/redux/reduxProvider.tsx";
+import AntThemeProvider from "./lib/providers/antDesign/AntThemeProvider.tsx";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <HelmetProvider>
-      <Provider store={store}>
-        <ThemeConfig>
+      <ReduxProvider>
+        <AntThemeProvider>
           {/* Top loading bar should be placed inside the RouterProvider */}
           {/* <TopLoadingProgressBar /> */}
           <RouterProvider router={Routes} />
           <Toaster />
           <PageRefreshWarning />
-        </ThemeConfig>
-      </Provider>
+        </AntThemeProvider>
+      </ReduxProvider>
     </HelmetProvider>
   </React.StrictMode>
 );

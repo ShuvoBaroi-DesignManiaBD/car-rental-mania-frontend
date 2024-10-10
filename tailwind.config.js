@@ -19,6 +19,10 @@ export default {
         "bg": "#FFF5EB",
       }
     },
+    backgroundImage: {
+      'pattern': "url('/pattern.webp')",
+      'hero-bg': "url('/hero-bg.webp')"
+    }
   },
   plugins: [],
   darkMode: 'class'

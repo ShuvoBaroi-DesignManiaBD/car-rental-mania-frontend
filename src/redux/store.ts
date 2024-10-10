@@ -16,6 +16,7 @@ import userMenuDrawerSlice from "./features/ui/userMenuDrawer/userMenuDrawerSlic
 import deviceTypeSlice from "./features/ui/deviceType/deviceTypeSlice";
 import carSlice from "./features/car/carSlice";
 import carFiltersSlice from "./features/carFilters/carFiltersSlice";
+import themeSlice from "./features/theme/themeSlice";
 
 const persistConfig = {
   key: "auth",
@@ -32,6 +33,7 @@ export const store = configureStore({
     carFilters: carFiltersSlice,
     userMenuDrawer: userMenuDrawerSlice,
     deviceType: deviceTypeSlice,
+    theme: themeSlice,
   },
   middleware: (getDefaultMiddlewares) =>
     getDefaultMiddlewares({

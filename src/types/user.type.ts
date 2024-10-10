@@ -1,4 +1,5 @@
 export interface TUser {
+  photo?: string;
   name: string;
   email: string;
   role: "user" | "admin";
