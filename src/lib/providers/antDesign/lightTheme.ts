@@ -6,23 +6,25 @@ export const lightTheme = {
   token: {
     // -------- Primary Colors --------
     colorPrimary: "#E2460D", // Main primary color for buttons, links, and active states
+    colorPrimaryLight: "#ffeee7", // Main primary color for buttons, links, and active states
     colorPrimaryBg: "#FF8901", // Background for primary buttons and highlights
     colorPrimaryHover: "#FF8901", // Hover state for primary buttons
     colorPrimaryTextHover: "#FFFFFF", // Text color for primary buttons on hover
     colorPrimaryText: "#FFFFFF", // Text color for primary buttons
-
+    
     // -------- Neutral Colors --------
     colorBgBase: "#F8FAFC", // Base background color
     colorBgLayout: "#F8FAFC", // Layout background
     colorText: "#1F2937", // Default text color (Dark Gray)
-    colorTextHeading: "#E2460D", // Primary color for headings
+    colorTextHeading: "#3D1000", // Primary color for headings
     colorTextSecondary: "#4B5563", // Secondary text color
     colorBorder: "#D1D5DB", // Neutral border color
     colorLink: "#FF8901",
-
+    
     // -------- Backgrounds --------
     colorBgContainer: "#FFFFFF", // Container backgrounds (cards, modals, etc.)
     colorBgElevated: "#F9FAFB", // Elevated component backgrounds (hovered states)
+    secondaryExtraLight:"#fff",
 
     // -------- Custom Section Backgrounds --------
     homeHeroBg: "#FF8901", // Background for hero sections
@@ -86,11 +88,11 @@ export const lightTheme = {
       boxShadow: "0 4px 8px rgba(226, 70, 13, 0.2)", // Custom shadow with primary color tint
     },
     Menu: {
-      itemSelectedColor: "#FF8901", // Selected menu item background color
+      itemSelectedColor: "#3D1000", // Selected menu item background color
       itemActiveBg: "#FFE7CC", // Menu item active background with a lighter tint
     },
     Typography: {
-      colorHeading: "#E2460D", // Primary color for headings
+      colorHeading: "#3D1000", // Primary color for headings
     },
   },
 };

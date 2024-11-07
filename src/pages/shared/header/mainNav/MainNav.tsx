@@ -47,7 +47,7 @@ const MainNav = () => {
   return (
     <ul
       id="mainNav"
-      className="flex justify-between items-center gap-8 textSemiLg"
+      className="flex justify-between items-center gap-8 textSemiLg self-center !m-0"
       style={{color: token?.colorText}}
     >
       {MainNavItems.map((menu) => (

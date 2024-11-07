@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Row, Tooltip } from "antd";
+import { Card, Col, Row, Tooltip, Typography } from "antd";
 import {
   MailOutlined,
   PhoneOutlined,
@@ -12,6 +12,8 @@ import CustomContainer from "@/components/layouts/CustomContainer";
 import SiteMeta from "@/components/seo/SiteMeta";
 import { RocketOutlined, HeartOutlined, TeamOutlined } from "@ant-design/icons";
 import { NavLink } from "react-router-dom";
+import DesignToken from "@/lib/providers/antDesign/DesignToken";
+import Title from "antd/es/typography/Title";
 const { Meta } = Card;
 
 const About = () => {
@@ -43,32 +45,33 @@ const About = () => {
       </div>
       {/* Hero Section */}
       <section
-        className="relative w-full h-64 md:h-[50vh] bg-cover bg-center text-white flex items-center justify-center"
+        className="relative w-full py-20 bg-cover bg-center text-white flex items-center justify-center"
         style={{
-          backgroundImage: `url('https://i.ibb.co.com/g9yGXTR/slide-camp-3.webp')`,
+          // backgroundImage: `url('https://i.ibb.co.com/g9yGXTR/slide-camp-3.webp')`,
+          backgroundColor: DesignToken().colorPrimaryBg,
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center px-4">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">About Us</h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto">
+          <Typography.Text className="text-white text-lg md:text-xl !max-w-sm mx-auto">
             Learn more about our mission, meet the dedicated team, and discover
             what drives us forward.
-          </p>
+          </Typography.Text>
         </div>
       </section>
         <CustomContainer className="flex flex-col px-5 md:px-0 mx-auto gap-20">
           {/* Mission Statement */}
           <section className="our-mission-section text-gray-600 body-font">
             <div className="container mx-auto text-center mb-16">
-              <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+              <Title level={2} className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
                 Our Mission
-              </h1>
-              <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500">
+              </Title>
+              <Typography.Text className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
                 At our core, we strive to create a positive impact through our
                 dedication and values. Here are our core missions that define
                 who we are.
-              </p>
+              </Typography.Text>
               <div className="flex mt-6 justify-center">
                 <div className="w-16 h-1 rounded-full bg-secondary inline-flex" />
               </div>
@@ -82,7 +85,7 @@ const About = () => {
                       <RocketOutlined
                         style={{
                           fontSize: "40px",
-                          color: "#ba986a",
+                          color: DesignToken()?.colorPrimary,
                           padding: "20px",
                         }}
                       />
@@ -107,11 +110,11 @@ const About = () => {
                     hoverable
                     cover={
                       <HeartOutlined
-                        style={{
-                          fontSize: "40px",
-                          color: "#ba986a",
-                          padding: "20px",
-                        }}
+                      style={{
+                        fontSize: "40px",
+                        color: DesignToken()?.colorPrimary,
+                        padding: "20px",
+                      }}
                       />
                     }
                     bordered={false}
@@ -134,11 +137,11 @@ const About = () => {
                     hoverable
                     cover={
                       <TeamOutlined
-                        style={{
-                          fontSize: "40px",
-                          color: "#ba986a",
-                          padding: "20px",
-                        }}
+                      style={{
+                        fontSize: "40px",
+                        color: DesignToken()?.colorPrimary,
+                        padding: "20px",
+                      }}
                       />
                     }
                     bordered={false}
@@ -163,10 +166,12 @@ const About = () => {
           {/* Contact Information & Map */}
           <section className="flex flex-col-reverse md:flex-row flex-wrap md:flex-nowrap gap-10 justify-center items-stretch">
             {/* Contact Info */}
-            <div className="w-full md:w-2/6 space-y-5 flex-grow bg-primary text-white rounded-md p-12">
-              <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+            <div className="w-full md:w-2/6 space-y-5 flex-grow text-white rounded-md p-12" style={{
+                          backgroundColor: "#3D1000",
+                        }}>
+              <Title level={3} className="text-2xl md:text-3xl font-semibold !text-white mb-4">
                 Contact Information
-              </h3>
+              </Title>
               <div className="flex items-center">
                 <PhoneOutlined className="text-lg text-secondaryLight mr-2" />
                 <span className="text-base">+1 234 567 890</span>
@@ -213,13 +218,13 @@ const About = () => {
 
           {/* Team Members Section */}
           <section className="text-center">
-            <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+            <Title level={2} className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
               Meet Our Team
-            </h2>
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500">
+            </Title>
+            <Typography.Text className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
               Our dedicated team works tirelessly to bring you the best products
               and services.
-            </p>
+            </Typography.Text>
             <div className="flex mt-6 justify-center">
               <span className="w-16 h-1 rounded-full bg-secondary inline-flex" />
             </div>
@@ -235,7 +240,7 @@ const About = () => {
                     <img
                       alt={member.name}
                       src={member.image}
-                      className="h-48 object-contain bg-gray-500"
+                      className="h-52 object-contain bg-gray-500"
                     />
                   }
                   className="shadow-md hover:shadow-lg transition-shadow"
@@ -245,14 +250,14 @@ const About = () => {
                       <span className="text-xl font-medium">{member.name}</span>
                     }
                     description={
-                      <>
-                        <span className="text-secondary text-base">
+                      <div>
+                        <Typography.Text className="text-secondary text-base">
                           {member.position}
-                        </span>
-                        <p className="text-base mt-2 text-gray-600">
+                        </Typography.Text><br></br>
+                        <Typography.Text className="text-base">
                           {member.bio}
-                        </p>
-                      </>
+                        </Typography.Text>
+                      </div>
                     }
                   />
                 </Card>

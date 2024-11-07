@@ -14,10 +14,11 @@ import {
 } from "@/redux/features/ui/userMenuDrawer/userMenuDrawerSlice";
 import { useDispatch } from "react-redux";
 import MobileUserDropdown from "./MobileUserDropdown";
-import { CloseOutlined } from "@ant-design/icons";
+import { CloseOutlined, MoonOutlined, SunOutlined } from "@ant-design/icons";
 import Logo from "@/components/ui/Logo";
 import { selectCurrentDevice } from "@/redux/features/ui/deviceType/deviceTypeSlice";
 import { TUser } from "@/types/user.type";
+import { selectCurrentTheme, setTheme } from "@/redux/features/theme/themeSlice";
 
 type TSidebarHide = {
   setIsSidebarHide?: CallableFunction | undefined;
@@ -27,6 +28,8 @@ type TSidebarHide = {
 const MobileNav = ({ setIsSidebarHide, isSidebarHide }: TSidebarHide) => {
   const dispatch = useDispatch();
   const currentUser: Partial<TUser | null> = useAppSelector(selectCurrentUser);
+  const currentTheme = useAppSelector(selectCurrentTheme);
+  const isDark = currentTheme === "dark";
   const userMenuDrawer: boolean = useAppSelector(selectUserMenuDrawer);
   const isDesktop = useAppSelector(selectCurrentDevice);
 
@@ -35,8 +38,15 @@ const MobileNav = ({ setIsSidebarHide, isSidebarHide }: TSidebarHide) => {
   };
 
   return (
-    <div className="flex items-center gap-4">
-      <Button className="p-0 border-0" onClick={toggleDrawer}>
+    <div className="flex items-center gap-4 h-full self-center">
+      <Button
+            size="small"
+            type="default"
+            shape="circle"
+            icon={!isDark ? <MoonOutlined /> : <SunOutlined />}
+            onClick={() => dispatch(setTheme(""))}
+          />
+      <Button className="p-0 border-0 bg-transparent" onClick={toggleDrawer}>
         <CgMenuRight size={24} />
       </Button>
       {currentUser ? (
@@ -68,13 +78,7 @@ const MobileNav = ({ setIsSidebarHide, isSidebarHide }: TSidebarHide) => {
         title={
           <div className="flex justify-between items-center">
             <div className="max-w-content flex gap-2 justify-start items-center text-xl">
-              <Logo className="min-h-10 min-w-10 max-w-10" />
-              <p
-                className={`font-bold text-primary transition-opacity duration-300"
-              }`}
-              >
-                CampProShop
-              </p>
+              <Logo className="max-h-7" />
             </div>
             <Button
               type="text"

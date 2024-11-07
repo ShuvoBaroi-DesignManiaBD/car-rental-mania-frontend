@@ -2,7 +2,7 @@ import UserDashboard from "@/pages/dashboards/user/UserDashboard";
 import MyOrder from "@/pages/dashboards/user/MyOrder";
 import Profile from "@/pages/dashboards/Profile";
 
-const customerDashboardRoutes = [
+const userDashboardRoutes = [
   {
     name: "Dashboard",
     path: "dashboard",
@@ -20,4 +20,4 @@ const customerDashboardRoutes = [
   },
 ];
 
-export default customerDashboardRoutes;
+export default userDashboardRoutes;

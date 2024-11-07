@@ -24,13 +24,13 @@
         background-color: transparent;
     }
     ::-webkit-scrollbar-thumb{
-        background-image: linear-gradient(#482f21, #ba986a);
+        background-image: linear-gradient(#E2460D, #FF8901);
         border-radius: 6px;
     }
 
     *::selection{
-        background-color: #482f21;
-        color: #ffd79e;
+        background-color: #E2460D;
+        color: #FF8901;
     }
 
 }
@@ -137,15 +137,15 @@
       }
       
       .hero__image-container {
-        @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen;
+        @apply flex justify-end items-end w-full xl:h-screen;
       }
       
       .hero__image {
-        @apply relative w-[90%] xl:h-full h-[590px] z-0;
+        @apply w-full xl:h-full h-[590px] z-0;
       }
       
       .hero__image-overlay {
-        @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
+        @apply absolute xl:-top-24 xl:-right-2/3 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-[78vh] h-[590px] overflow-hidden;
       }
 }
 

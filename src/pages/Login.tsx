@@ -16,6 +16,9 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { setUser, selectCurrentUser } from "@/redux/features/auth/authSlice";
 import { TUser } from "@/types/user.type";
 import { TSignInUser } from "@/types/auth.type";
+import DesignToken from "@/lib/providers/antDesign/DesignToken";
+import Title from "antd/es/typography/Title";
+import { Typography } from "antd";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -65,14 +68,14 @@ const Login = () => {
     return Navigate({ to: "/" });
   } else {
     return (
-      <main className="w-[100vw] h-[100vh] bg-[url('https://i.ibb.co/YdfcdG6/pattern.webp')] flex items-center justify-center mx-auto my-auto p-6">
-        <div className="w-[480px] py-5 md:py-0 mt-7 bg-white border rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <main className="w-[100vw] h-[100vh] flex items-center justify-center mx-auto my-auto p-6" style={{backgroundColor: DesignToken().headerBg}} >
+        <div className="w-[480px] py-5 md:py-0 mt-7 border rounded-xl shadow-sm" style={{backgroundColor: DesignToken().secondaryExtraLight, borderColor: DesignToken().colorBorder}}>
           <div className="p-4 sm:p-7">
-            <div className="text-center text-text space-y-4">
-              <Logo className="w-[120px] mx-auto"></Logo>
-              <h1 className="block text-2xl mt-6 font-bold dark:text-white text-primary">
+            <div className="text-cente space-y-4">
+              <Logo className="w-[180px] mx-auto mb-10"></Logo>
+              <Title level={1} className="block !text-2xl text-center mt-6 font-bold dark:text-white text-primary">
                 Sign in
-              </h1>
+              </Title>
             </div>
             <div className="mt-5">
               {/* <SocialLogin url={state}></SocialLogin> */}
@@ -83,7 +86,7 @@ const Login = () => {
                   className="w-20 border text-white bg-blue-600 rounded p-3"
                 />
               </div>
-              <div className="py-3 flex items-center text-xs text-gray-400 uppercase before:flex-[1_1_0%] before:border-t before:border-gray-200 before:me-6 after:flex-[1_1_0%] after:border-t after:border-gray-200 after:ms-6 dark:text-gray-500 dark:before:border-gray-600 dark:after:border-gray-600">
+              <div className="py-3 flex items-center text-xs text-gray-400 uppercase before:flex-[1_1_0%] before:border-t before:border-gray-200 before:me-6 after:flex-[1_1_0%] after:border-t after:border-gray-200 after:ms-6 dark:text-gray-500 dark:before:border-gray-600 dark:after:border-gray-600" style={{borderColor: DesignToken().colorBorder}}>
                 Or
               </div>
               {/* Form */}
@@ -159,7 +162,7 @@ const Login = () => {
                   />
                   <div className="flex flex-col md:flex-row mt-3 md:mt-4 gap-2 md:gap-0 mx-auto md:mx-0 justify-center md:justify-between items-end textSm font-medium">
                     <div className="mt-2 text-text flex gap-2 space-x-1 justify-center items-center dark:text-gray-400">
-                      <p>Not a memeber?</p>
+                      <Typography.Text>Not a memeber?</Typography.Text>
                       <Link
                         className="text-secondary font-semibold decoration-2 hover:underline dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                         to="/register"

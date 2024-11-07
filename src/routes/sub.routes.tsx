@@ -3,8 +3,8 @@ import About from "@/pages/About";
 import Cart from "@/pages/cart/Cart";
 import CheckoutPage from "@/pages/checkout/Checkout";
 import Home from "@/pages/home/Home.tsx";
-import CarDetail from "@/pages/carDetail/CarDetail";
 import Cars from "@/pages/cars/Cars";
+import Booking from "@/pages/booking/Booking";
 
 const subRoutes = [
   {
@@ -21,7 +21,7 @@ const subRoutes = [
   },
   {
     path: "cars/:carId",
-    element: <CarDetail></CarDetail>,
+    element: <Booking></Booking>,
   },
   {
     path: "cart",

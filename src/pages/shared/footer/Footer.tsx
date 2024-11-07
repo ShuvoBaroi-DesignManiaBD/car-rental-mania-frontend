@@ -1,6 +1,5 @@
 import { Divider, Layout, theme, Typography } from "antd";
 import Title from "antd/es/typography/Title";
-import useToken from "antd/es/theme/useToken";
 import { useAppSelector } from "@/redux/hooks";
 import { FacebookFilled, GithubFilled, InstagramFilled, InstagramOutlined, LinkedinFilled, TwitterOutlined } from "@ant-design/icons";
 import Logo from "@/components/ui/Logo";

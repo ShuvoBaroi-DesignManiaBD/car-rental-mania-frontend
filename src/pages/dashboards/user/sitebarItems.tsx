@@ -6,7 +6,7 @@ import { sidebarMenuItem } from "@/types/menu.type";
 import UniqueIdGenerator from "@/utils/UniqueIdGenerator";
 import { NavLink } from "react-router-dom";
 import LabelWithLink from "../LabelWithLink";
-const customerSidebarItems: sidebarMenuItem[] = [
+const userSidebarItems: sidebarMenuItem[] = [
   {
     key: "1",
     label: <LabelWithLink url="dashboard" role={true}>Dashboard</LabelWithLink>,
@@ -45,7 +45,7 @@ const customerSidebarItems: sidebarMenuItem[] = [
   // },
 ];
 
-export default customerSidebarItems;
+export default userSidebarItems;
 
 //   const items: MenuItem[] = [
 //     {

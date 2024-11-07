@@ -4,7 +4,6 @@ import { createBrowserRouter } from "react-router-dom";
 import subRoutes from "./sub.routes.tsx";
 import { routeGenerator } from "@/utils/routesGenerator.ts";
 import Dashboard from "@/pages/dashboards/Dashboard.tsx";
-import customerDashboardRoutes from "./user/user.routes.tsx";
 import ProtectedRoute from "@/components/layouts/ProtectedRoute.tsx";
 // import OrderSuccess from "@/pages/order/order-success.tsx";
 import adminRoutes from "./admin/admin.routes.tsx";
@@ -14,6 +13,7 @@ import TopLoadingProgressBar from "@/components/ui/progressBar/TopLoadingProgres
 import MainLayout from "@/components/layouts/MainLayout.tsx";
 import OrderSuccess from "@/pages/order/OrderSuccess.tsx";
 import { TPath } from "@/types/path.type.ts";
+import userDashboardRoutes from "./user/user.routes.tsx";
 // const MainLayout = lazy(() => import("@/components/layouts/MainLayout"));
 // const Dashboard = lazy(() => import("@/pages/dashboards/Dashboard"));
 const Routes = createBrowserRouter([
@@ -40,7 +40,7 @@ const Routes = createBrowserRouter([
     children: routeGenerator(adminRoutes),
   },
   {
-    path: "customer",
+    path: "user",
     element: (
       <ProtectedRoute role={["user"]}>
         <TopLoadingProgressBar />
@@ -48,7 +48,7 @@ const Routes = createBrowserRouter([
       </ProtectedRoute>
     ),
     errorElement: <NotFound></NotFound>,
-    children: routeGenerator(customerDashboardRoutes),
+    children: routeGenerator(userDashboardRoutes),
   },
   {
     path: "login",

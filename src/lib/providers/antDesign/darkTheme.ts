@@ -2,10 +2,11 @@ import { theme } from "antd";
 
 // Custom dark theme tokens based on the two primary colors: #E2460D and #FF8901
 export const darkTheme = {
-  // algorithm: theme.darkAlgorithm,
+  algorithm: theme.darkAlgorithm,
   token: {
     // -------- Primary Colors --------
     colorPrimary: "#E2460D", // Main primary color for buttons and active states
+    colorPrimaryLight: "#282828",
     colorPrimaryBg: "#FF8901", // Background for primary buttons and highlights
     colorPrimaryHover: "#FF8901", // Hover state for primary buttons
     colorPrimaryTextHover: "#FFFFFF", // Text color for primary buttons on hover
@@ -16,13 +17,14 @@ export const darkTheme = {
     colorBgBase: "#1C1C1E", // Base background color for dark mode (Very dark gray)
     colorBgLayout: "#121212", // Layout background color for dark mode (Blackish-gray)
     colorText: "#E4E4E7", // Default text color for dark mode (Light gray)
-    colorTextHeading: "#FF8901", // Primary color for headings in dark mode
+    colorTextHeading: "#FFFFFF", // Primary color for headings in dark mode
     colorTextSecondary: "#A1A1AA", // Secondary text color (Grayish-white)
     colorBorder: "#636363", // Neutral border color for dark backgrounds (Dark gray)
 
     // -------- Backgrounds --------
     colorBgContainer: "#2D2D2F", // Container backgrounds (cards, modals, etc.)
     colorBgElevated: "#3A3A3C", // Elevated component backgrounds (hovered states)
+    secondaryExtraLight:"#1C1C1E",
 
     // -------- Custom Section Backgrounds --------
     homeHeroBg: "#E2460D", // Background for hero sections with the primary color
@@ -78,16 +80,16 @@ export const darkTheme = {
       colorTextPrimary: "#FFFFFF", // Text color inside primary buttons
     },
     Layout: {
-      headerBg: "#1C1C1E", // Header background color (Very dark gray)
-      footerBg: "#1C1C1E", // Footer background color (Very dark gray)
+      headerBg: "transparent", // Header background color (Very dark gray)
+      footerBg: "transparent", // Footer background color (Very dark gray)
     },
     Card: {
       borderColor: "#E2460D", // Border color for cards with primary color
       boxShadow: "0 4px 8px rgba(255, 137, 1, 0.2)", // Custom shadow with secondary color tint
     },
     Menu: {
-      itemSelectedColor: "#E2460D", // Selected menu item background color
-      itemActiveBg: "#FF8901", // Menu item active background with secondary color
+      itemSelectedColor: "#fff", // Selected menu item background color
+      itemActiveBg: "#ff89014a", // Menu item active background with secondary color
     },
     Typography: {
       colorHeading: "#FF8901", // Primary color for headings

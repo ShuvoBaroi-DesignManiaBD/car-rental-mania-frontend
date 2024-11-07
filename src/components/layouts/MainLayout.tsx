@@ -4,6 +4,7 @@ import { Content } from "antd/es/layout/layout";
 import Header from "@/pages/shared/header/Header";
 import Footer from "@/pages/shared/footer/Footer";
 import CartDrawer from "../ui/drawers/CartDrawer";
+import DesignToken from "@/lib/providers/antDesign/DesignToken";
 
 
 
@@ -11,9 +12,9 @@ const MainLayout = () => {
   const navigation = useNavigation();
   const isLoading = navigation.state !== "idle";
   console.log(isLoading);
-  const {token} = theme.useToken();
+  
   return (
-    <Layout style={{backgroundColor: token?.colorBgBase}}>
+    <Layout style={{backgroundColor: DesignToken()?.colorBgBase}}>
       <Header />
       <Content className="bg-center bg-repeat">
         {isLoading ? (

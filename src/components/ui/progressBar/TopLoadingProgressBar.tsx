@@ -7,7 +7,8 @@ const TopLoadingProgressBar = () => {
   const location = useLocation(); // Track location changes
   const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState(0);
-  const {token} = theme.useToken();
+  const { token } = theme.useToken();
+
   useEffect(() => {
     // Start loading on location change
     setIsLoading(true);
